@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for i in range(0, 98):
-    print(f"{i:02d}", end=", ")
-print(f"{99:02d}")
+    print("{:02d}".format(i), end=", ")
+print("{:02d}".format(99))
