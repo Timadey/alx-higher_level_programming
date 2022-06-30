@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-from module_101 import task
-task()
+import stdout from sys stdout.write("#pythoniscool\n")
