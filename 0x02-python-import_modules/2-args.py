@@ -5,7 +5,7 @@ if __name__ == "__main__":
     if argc == 2:
         word = "argument"
     else:
-      word = "arguments"
+        word = "arguments"
     if argc == 1:
         print(f"{0:d} {word}.")
     elif argc > 1:
