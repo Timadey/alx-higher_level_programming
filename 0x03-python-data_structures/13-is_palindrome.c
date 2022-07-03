@@ -56,29 +56,3 @@ int is_palindrome(listint_t **head)
 	else
 		return (0);
 }
-
-/**
- * transverse_listint - transverse a listint_t list
- * this function might not work, test it first
- * @head: head of the listint_t list
- * Return: the head of the transversed list
- */
-listint_t *transverse_listint(listint_t **head)
-{
-	listint_t *h = *head;
-	listint_t *prev = h;
-	listint_t *current = prev->next;
-	listint_t *next = current->next;
-
-	prev->next = NULL;
-	while (next != NULL)
-	{
-		current->next = prev;
-		prev = current;
-		current = next;
-		next = current->next;
-	}
-	current->next = prev;
-	h = current;
-	return (h);
-}
