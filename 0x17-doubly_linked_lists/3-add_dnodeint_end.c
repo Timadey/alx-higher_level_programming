@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * add_nodeint_end - adds a new node at the end of a dlistint_t list
+ * add_dnodeint_end - adds a new node at the end of a dlistint_t list
  * @head: a pointer to the head
  * @n: data for the new node
  * Return: the new node added
@@ -10,8 +10,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	dlistint_t *curr = *head;
 	dlistint_t *prev = NULL;
 	dlistint_t *new = NULL;
-	
-	while(curr != NULL)
+
+	while (curr != NULL)
 	{
 		prev = curr;
 		curr = curr->next;
@@ -24,7 +24,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		return (NULL);
 	}
 	new->n = n;
-	new->prev = prev;	
+	new->prev = prev;
 	new->next = NULL;
 
 	if (*head == NULL)
