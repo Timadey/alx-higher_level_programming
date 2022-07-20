@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """This module defines a class Square"""
+
+
 class Square:
     """Square has a default size of 0"""
     def __init__(self, size=0):
