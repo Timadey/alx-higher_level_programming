@@ -9,7 +9,7 @@ Attributes:
 class Node:
     """Node defines a node of a singly linked list"""
 
-    def __init___(self, data, next_node=None):
+    def __init__(self, data, next_node=None):
         """The Node is initialized with data and the next node
 
         Args:
@@ -93,9 +93,7 @@ class SinglyLinkedList:
             value(int): the value of the new node to add
         """
 
-        new_node = Node()
-        new_node.data = value
-        new_node.next_node = None
+        new_node = Node(value)
 
         if (self.__head is None):
             # check if list is empty and set new node to be head if true
