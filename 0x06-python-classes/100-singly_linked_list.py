@@ -54,7 +54,7 @@ class Node:
     def next_node(self, value):
         try:
             if (type(value) != type(self)):
-                raise TypeError("next_node must be a node object")
+                raise TypeError("next_node must be a Node object")
         except TypeError:
             if value is not None:
                 raise
