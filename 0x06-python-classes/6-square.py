@@ -25,6 +25,7 @@ class Square:
             The size of the square
         """
         return self.__size
+
     def position(self):
         """The position of the square"""
         return self.__position
