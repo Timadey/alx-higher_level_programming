@@ -79,7 +79,9 @@ class SinglyLinkedList:
         current_node = self.__head
 
         while (current_node is not None):
-            print(f"{current_node.data:d}")
+            print(f"{current_node.data:d}", end="")
+            if current_node.next_node is not None:
+                print()
             current_node = current_node.next_node
         return ""
 
