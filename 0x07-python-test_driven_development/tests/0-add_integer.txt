@@ -1,0 +1,23 @@
+=========================
+Test for 0-add_integer.py
+=========================
+>>> add_integer =  __import__("0-add_integer").add_integer
+>>> print(add_integer(0, 0))
+0
+>>> print(add_integer(12, -2))
+10
+>>> print(add_integer(2.3, 8.6))
+10
+>>> print(add_integer(5.9, 2))
+7
+>>> print(add_integer(1))
+99
+>>> print(add_integer("hjsj", 9)) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> print(add_integer(9, 'H')) #doctest: +ELLIPSIS
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
