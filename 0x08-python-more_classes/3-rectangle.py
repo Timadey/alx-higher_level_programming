@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a Rectangle class"""
 
+
 class Rectangle:
     """Defines a rectangle"""
 
@@ -15,7 +16,7 @@ class Rectangle:
 
         self.width = width
         self.height = height
-    
+
     def __str__(self):
         """prints the rectangle with the character #"""
 
@@ -56,7 +57,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
 
         self.__width = value
-    
+
     @property
     def height(self):
         """Get the height of a rectangle
@@ -81,9 +82,7 @@ class Rectangle:
 
         self.__height = value
 
-
     # Methods
-
     def area(self):
         """Returns the area of a rectangle"""
 
