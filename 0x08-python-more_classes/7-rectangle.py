@@ -11,7 +11,7 @@ class Rectangle:
 
     # Class Attributes
     number_of_instances = 0
-    print_symbol = str("#")
+    print_symbol = "#"
 
     # Magic methods
     def __init__(self, width=0, height=0):
@@ -34,11 +34,8 @@ class Rectangle:
 
         rec = ""
         for h in range(self.__height):
-            for w in range(self.__width):
-                rec += str(type(self).print_symbol)
-            if h != self.__height - 1:
-                rec += '\n'
-        return rec
+            rec += (str(self.print_symbol) * self.__width) + "\n"
+        return rec[:-1]
 
     def __repr__(self):
         """Return a string representation of the rectangle"""
