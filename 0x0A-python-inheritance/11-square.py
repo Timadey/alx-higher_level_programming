@@ -28,8 +28,3 @@ class Square(Rectangle):
         """Returns the area of the square"""
 
         return super().area()
-
-    def print(self):
-        """Prints the string representation of the square"""
-
-        print(f"[Square] {self.__size}/{self.__size}")
