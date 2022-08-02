@@ -23,3 +23,26 @@ Print elements appended and check that list is unchanged after printing sorted
 	[0, 1, 2, 4]
 	>>> print(my_list)
 	[1, 4, 2, 0]
+
+Check print sorted with empty list
+::
+	>>> empty_list = MyList()
+	>>> print(empty_list)
+	[]
+	>>> empty_list.print_sorted()
+	[]
+	>>> empty_list.append(2)
+	>>> empty_list.append(0)
+	>>> empty_list.append(-2)
+	>>> empty_list.append(3)
+	>>> empty_list.append(4)
+	>>> print(empty_list)
+	[2, 0, -2, 3, 4]
+	>>> empty_list.print_sorted()
+	[-2, 0, 2, 3, 4]
+	>>> print(empty_list)
+	[2, 0, -2, 3, 4]
+
+================
+END TESTS
+================
