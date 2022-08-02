@@ -22,7 +22,7 @@ value = integer 89
 	>>> bg.integer_validator("width", 89)
 
 value = string "John"
-:::
+::
 	>>> bg.integer_validator("name", "John")
 	Traceback (most recent call last):
 	...
@@ -41,6 +41,55 @@ value is less than 0
 	Traceback (most recent call last):
 	...
 	ValueError: distance must be greater than 0
+
+value is None
+::
+	>>> bg.integer_validator("age", None)
+	Traceback (most recent call last):
+	...
+	TypeError: age must be an integer
+
+value is dictionary
+::
+	>>> bg.integer_validator("age", {2, 4})
+	Traceback (most recent call last):
+	...
+	TypeError: age must be an integer
+
+value is boolean
+::
+	>>> bg.integer_validator("age", False)
+	Traceback (most recent call last):
+	...
+	TypeError: age must be an integer
+
+value is list
+::
+	>>> bg.integer_validator("name", [2, 3])
+	Traceback (most recent call last):
+	...
+	TypeError: name must be an integer
+
+value is tuple
+::
+	>>> bg.integer_validator("name", (1,))
+	Traceback (most recent call last):
+	...
+	TypeError: name must be an integer
+
+No value provide
+::
+	>>> bg.integer_validator("name")
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+No parameter provided
+::
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 ========
 END TEST
