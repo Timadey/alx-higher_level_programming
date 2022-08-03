@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+from sys import argv
 """Add Items Modules"""
 
-from sys import argv
 
 arg = argv[1:]
 add_item_file = "add_item.json"
