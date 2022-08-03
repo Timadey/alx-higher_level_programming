@@ -15,6 +15,6 @@ with open(add_item_file, mode="w", encoding="utf-8") as json_file:
 
     list_from_json = load_from_json_file(add_item_file)
     arg.extend(list_from_json)
-    
+
     save_to_json_file = __import__("5-save_to_json_file.py")
     save_to_json_file(arg, add_item_file)

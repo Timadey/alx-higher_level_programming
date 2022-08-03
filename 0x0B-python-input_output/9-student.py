@@ -15,5 +15,4 @@ class Student:
     def to_json(self):
         """Retrieve a dictionary representation of a student instance"""
 
-        import json
-        return json.dumps(self.__dict__)
+        return self.__dict__.copy()
