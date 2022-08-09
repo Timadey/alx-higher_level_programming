@@ -89,8 +89,8 @@ class Rectangle(Base):
     def __str__(self):
         """Return string representation of a class"""
 
-        return f"[Rectangle] ({self.id}) {self.__x}/\
-{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
+    " - {self.__width}/{self.__height}"
 
     def area(self):
         """calculate the `area` of a rectangle"""
@@ -124,6 +124,6 @@ class Rectangle(Base):
     def to_dictionary(self):
         """Return dictionary representation of Rectangle"""
 
-        new_dict = {"id": self.id, "width": self.__width, "height": self.__height, "x": self.__x, "y": self.__y}
+        new_dict = {"id": self.id, "width": self.__width,
+                    "height": self.__height, "x": self.__x, "y": self.__y}
         return new_dict
-

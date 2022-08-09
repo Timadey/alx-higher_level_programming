@@ -4,6 +4,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Class Rectangle"""
 
@@ -31,7 +32,7 @@ class Square(Rectangle):
         self.validate_input("size", value)
         self.validate_dimension("size", value)
         self.__size = value
-    
+
     def update(self, *args, **kwargs):
         """Update the class Rectangle"""
 
@@ -50,9 +51,10 @@ class Square(Rectangle):
             if key != "id":
                 key = "_Square__" + key
             setattr(self, key, value)
-    
+
     def to_dictionary(self):
         """Return dictionary representation of Rectangle"""
 
-        new_dict = {"id":self.id, "size":self.__size, "x":self.__x, "y":self.__y}
+        new_dict = {"id": self.id, "size": self.__size,
+                    "x": self.__x, "y": self.__y}
         return new_dict
