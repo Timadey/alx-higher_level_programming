@@ -10,7 +10,7 @@ class Base:
     def __init__(self, id=None):
         """Initialize the class"""
 
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -35,7 +35,7 @@ class Base:
             new_list = [obj.to_dictionary() for obj in list_objs]
         file_name = cls.__name__ + ".json"
 
-        with open (file_name, mode="w") as json_file:
+        with open(file_name, mode="w") as json_file:
             json_file.write(cls.to_json_string(new_list))
 
     @staticmethod
@@ -51,7 +51,7 @@ class Base:
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set"""
 
-        instance = cls(0,0)
+        instance = cls(0, 0)
         instance.update(**dictionary)
         return instance
 

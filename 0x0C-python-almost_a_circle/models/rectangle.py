@@ -4,6 +4,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """Class rectangle inherits from Base"""
 
@@ -61,7 +62,6 @@ class Rectangle(Base):
         self.validate_dimension("height", value)
         self.__height = value
 
-
     @property
     def x(self):
         """x getter"""
@@ -73,7 +73,6 @@ class Rectangle(Base):
         self.validate_input("x", value)
         self.validate_axis("x", value)
         self.__x = value
-
 
     @property
     def y(self):
@@ -90,7 +89,8 @@ class Rectangle(Base):
     def __str__(self):
         """Return string representation of a class"""
 
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.__x}/\
+{self.__y} - {self.__width}/{self.__height}"
 
     def area(self):
         """calculate the `area` of a rectangle"""
@@ -102,7 +102,7 @@ class Rectangle(Base):
 
         print(self.__y * "\n", end="")
         for line in range(self.__height):
-            print(self.__x * " ",self.__width * "#")
+            print(self.__x * " ", self.__width * "#")
 
     def update(self, *args, **kwargs):
         """Update the class Rectangle"""
@@ -124,7 +124,6 @@ class Rectangle(Base):
     def to_dictionary(self):
         """Return dictionary representation of Rectangle"""
 
-        new_dict = {"id":self.id, "width":self.__width,
-                "height":self.__height, "x":self.__x, "y":self.__y}
+        new_dict = {"id": self.id, "width": self.__width, "height": self.__height, "x": self.__x, "y": self.__y}
         return new_dict
 
