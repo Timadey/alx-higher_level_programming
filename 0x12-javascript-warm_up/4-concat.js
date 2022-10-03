@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 import process from 'node:process';
 let arg = process.argv;
 arg = arg.slice(2, 4);

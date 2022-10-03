@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 import process from 'node:process';
 const arg = process.argv;
 const num = arg[2];

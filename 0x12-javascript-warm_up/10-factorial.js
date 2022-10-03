@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 import process from 'node:process';
 function factorial (num) {
   if (isNaN(num) || num === 1) {

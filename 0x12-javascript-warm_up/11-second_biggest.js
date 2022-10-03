@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 import process from 'node:process';
 const arg = process.argv.slice(2);
 if (arg.length === 0) {
