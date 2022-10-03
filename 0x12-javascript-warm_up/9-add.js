@@ -1,5 +1,4 @@
 #!/usr/bin/node
-import process from 'node:process';
 function add (a, b) {
   return a + b;
 }
