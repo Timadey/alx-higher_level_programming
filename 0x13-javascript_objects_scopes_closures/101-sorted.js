@@ -6,7 +6,7 @@ Object.keys(dict).map(function (key, index) {
   if (newDict[dict[key]] === undefined) {
     newDict[dict[key]] = [];
   }
-  return newDict[dict[key]].push(key);
+  newDict[dict[key]].push(key);
 });
 
 console.log(newDict);
