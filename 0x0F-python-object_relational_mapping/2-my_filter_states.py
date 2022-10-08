@@ -12,8 +12,8 @@ if __name__ == '__main__':
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cur = db.cursor()
     name = sys.argv[4]
-    states = cur.execute(
-        "SELECT * FROM states WHERE name = {};".format(name)).fetchall()
+    cur.execute("SELECT * FROM states WHERE name = {};".format(name))
+    states = cur.fetchall()
 
     for state in states:
         print(state)
