@@ -10,7 +10,8 @@ if __name__ == '__main__':
                      passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cur = db.cursor()
     states = cur.execute("SELECT cities.id, cities.name, states.name \
-         FROM cities JOIN state USING ON states.id = cities.state_id;").fetchall()
+         FROM cities JOIN state USING ON \
+            states.id = cities.state_id;").fetchall()
 
     for state in states:
         print(state)
