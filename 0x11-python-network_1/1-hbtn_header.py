@@ -3,10 +3,11 @@
 import urllib.request
 import sys
 
-url = sys.argv[1]
-req = urllib.request.Request(url)
-with urllib.request.urlopen(req) as response:
-    headers = str(response.headers)
-    x = headers.find("X-Request-Id")
-    if x != -1:
-        print (headers[x+14: x+14+37])
+if __name__ == "__main__":
+    url = sys.argv[1]
+    req = urllib.request.Request(url)
+    with urllib.request.urlopen(req) as response:
+        headers = str(response.headers)
+        x = headers.find("X-Request-Id")
+        if x != -1:
+            print (headers[x+14: x+14+37])
