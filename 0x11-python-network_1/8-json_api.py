@@ -1,21 +1,27 @@
 #!/usr/bin/python3
-"""Search a user"""
-
+"""
+Python script that sends a POST request to the URL and
+to an URL with the letter as a parameter
+"""
 import requests
 import sys
 
+
 if __name__ == "__main__":
-    url = "http://0.0.0.0:5000/search_user"
-    if len(sys.argv) >= 2:
-        data = {'q': sys.argv[1]}
-    else:
-        data = {'q': ""}
-    response = requests.post(url, data)
-    if response.status_code == 200:
-        try:
-            res = response.json()
-            print(f"[{res.get('id')}] {res.get('name')}")
-        except requests.exceptions.JSONDecodeError:
-            print('Invalid Json')
-    elif response.status_code == 204:
-        print('No Content')
+    data = {'q': ""}
+
+    try:
+        data['q'] = sys.argv[1]
+    except:
+        pass
+
+    r = requests.post('http://0.0.0.0:5000/search_user', data)
+
+    try:
+        json_o = r.json()
+        if not json_o:
+            print("No result")
+        else:
+            print("[{}] {}".format(json_o.get('id'), json_o.get('name')))
+    except:
+        print("Not a valid JSON")
